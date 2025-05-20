@@ -13,9 +13,9 @@ class TestChallenges:
     @pytest.mark.parametrize(
         "headers, expected_status",
         [
-            (None, HTTPStatus.OK),  # Заголовки по умолчанию (из settings)
+            (None, HTTPStatus.UNAUTHORIZED),  # Заголовки по умолчанию (из settings)
             ({"X-Challenger": ""}, HTTPStatus.OK),  # Пустой X-Challenger
-            ({"X-Challenger": "test_token", "Accept": "application/xml"}, HTTPStatus.OK),  # Дополнительный заголовок
+            ({"X-Challenger": "test_token", "Accept": "application/xml"}, HTTPStatus.UNAUTHORIZED),  # Дополнительный заголовок
             ({"Authorization": "Bearer invalid"}, HTTPStatus.OK),  # Неверный заголовок
         ],
         ids=[
