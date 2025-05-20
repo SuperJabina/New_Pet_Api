@@ -9,6 +9,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   run-tests:
@@ -55,6 +58,11 @@ jobs:
         with:
           name: allure-results
           path: allure-results
+
+      - name: Check downloaded Allure results
+        run: |
+          echo "Downloaded allure-results contents:"
+          ls -la allure-results || echo "No files in allure-results"
 
       - name: Generate and deploy Allure report
         uses: simple-elf/allure-report-action@v1.12
