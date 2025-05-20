@@ -1,0 +1,5 @@
+accept: application/xml
+accept-encoding: gzip, deflate
+connection: keep-alive
+user-agent: python-httpx/0.28.1
+x-challenger: test_token

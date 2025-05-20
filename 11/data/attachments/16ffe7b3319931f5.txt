@@ -1,0 +1,4 @@
+DEBUG    config.settings:settings.py:41 Settings: {'api_url': HttpUrl('https://apichallenges.herokuapp.com/'), 'api_timeout': 10.0, 'api_x_challenger': '482a0be1-a573-40b7-97ea-a2dc478401b0', 'log_level': 'DEBUG'}
+DEBUG    fixtures.settings_fixtures:settings_fixtures.py:15 Loaded settings: {'api_url': HttpUrl('https://apichallenges.herokuapp.com/'), 'api_timeout': 10.0, 'api_x_challenger': '482a0be1-a573-40b7-97ea-a2dc478401b0', 'log_level': 'DEBUG'}
+INFO     clients.base_client:base_client.py:23 Make GET request to /challenges with headers {'accept': '*/*', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'user-agent': 'python-httpx/0.28.1', 'x-challenger': '482a0be1-a573-40b7-97ea-a2dc478401b0'} params None
+INFO     clients.base_client:base_client.py:28 Got response 200 from /challenges
