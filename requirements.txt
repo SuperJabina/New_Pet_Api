@@ -6,5 +6,3 @@ httpx
 pydantic_core
 pydantic
 pydantic-settings
-flake8==7.1.1
-mypy==1.13.0

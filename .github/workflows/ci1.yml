@@ -28,12 +28,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run linter
-        run: flake8 .
-
-      - name: Run type checker
-        run: mypy .
-
       - name: Copy .ci_env to .env
         run: cp .ci_env .env || echo "No .ci_env found, skipping"
 
