@@ -1,3 +1,4 @@
+allure-pytest
 allure-python-commons
 pytest
 Faker
