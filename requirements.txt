@@ -1,0 +1,8 @@
+allure-python-commons
+pytest
+Faker
+jsonschema
+httpx
+pydantic_core
+pydantic
+pydantic-settings
