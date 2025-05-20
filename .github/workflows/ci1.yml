@@ -59,4 +59,12 @@ jobs:
           allure_results: allure-results
           allure_history: allure-history
           gh_pages: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify gh-pages branch
+        run: |
+          git fetch origin
+          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            echo "gh-pages branch exists"
+          else
+            echo "gh-pages branch not found"
+          fi
