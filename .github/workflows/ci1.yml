@@ -52,6 +52,32 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Initialize gh-pages branch if it doesn't exist
+        run: |
+          git fetch origin gh-pages || true
+          if ! git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            git checkout --orphan gh-pages
+            mkdir -p allure-history
+            git add allure-history
+            git commit --allow-empty -m "Initialize gh-pages branch for Allure reports"
+            git push origin gh-pages
+          fi
+
+      - name: Get Allure history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
 
       - name: Download Allure results
         uses: actions/download-artifact@v4
@@ -64,13 +90,21 @@ jobs:
           echo "Downloaded allure-results contents:"
           ls -la allure-results || echo "No files in allure-results"
 
-      - name: Generate and deploy Allure report
+      - name: Generate Allure report
         uses: simple-elf/allure-report-action@v1.12
+        if: always()
+        id: allure-report
         with:
           allure_results: allure-results
           allure_history: allure-history
           gh_pages: gh-pages
+        continue-on-error: true
 
-      - name: Output report URL
-        run: |
-          echo "Allure report published at https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+      - name: Deploy report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
+        continue-on-error: true
