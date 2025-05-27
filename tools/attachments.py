@@ -94,11 +94,21 @@ def attach_response_to_allure(response: Response, method: str, url: str) -> None
     if response.text:
         content_type = response.headers.get("content-type", "").lower()
         if "application/json" in content_type:
-            allure.attach(
-                response.text,
-                name="Response Body (JSON)",
-                attachment_type=allure.attachment_type.JSON
-            )
+            try:
+                # Форматируем JSON с отступами
+                formatted_json = json.dumps(response.json(), indent=2, ensure_ascii=False)
+                allure.attach(
+                    formatted_json,
+                    name="Response Body (JSON)",
+                    attachment_type=allure.attachment_type.JSON
+                )
+            except ValueError:
+                # Если JSON невалидный, прикрепляем как текст
+                allure.attach(
+                    response.text,
+                    name="Response Body (Invalid JSON)",
+                    attachment_type=allure.attachment_type.TEXT
+                )
         elif "xml" in content_type:
             formatted_xml = format_xml(response.text)
             allure.attach(

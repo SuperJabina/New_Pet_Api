@@ -2,6 +2,7 @@ import pytest
 import httpx
 from config.settings import Settings
 from clients.challenges_client import ChallengesClient
+from clients.todos_client import TodosClient
 from tools.logger import get_logger
 from pydantic import ValidationError
 from typing import Iterator
@@ -28,3 +29,10 @@ def challenges_client(client: httpx.Client) -> ChallengesClient:
     Фикстура создаёт ChallengesClient.
     """
     return ChallengesClient(client=client)
+
+@pytest.fixture(scope="session")
+def todos_client(client: httpx.Client) -> TodosClient:
+    """
+    Фикстура создаёт ChallengesClient.
+    """
+    return TodosClient(client=client)
