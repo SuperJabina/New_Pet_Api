@@ -1,0 +1,6 @@
+accept: */*
+accept-encoding: gzip, deflate
+connection: keep-alive
+user-agent: python-httpx/0.28.1
+x-challenger: ac54057e-a8de-49af-8857-e57087a94c6b
+authorization: Bearer invalid

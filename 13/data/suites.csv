@@ -1,0 +1,26 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","52","Get new challenger token","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestChallenges","test_challenges","",""
+"
+        Тестирует GET /todos с различными заголовками.
+        ","8","Get all todos. Using extra headers[{'X-Challenger': ''}]","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestTodos","test_challenges","",""
+"
+        Тестирует GET /challenges с различными заголовками.
+        ","12","Get all challenges. Using extra headers[{'X-Challenger': 'test_token', 'Accept': 'application/xml'}]","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestChallenges","test_challenges","",""
+"
+        Тестирует GET /challenges с различными заголовками.
+        ","10","Get all challenges. Using extra headers[{'X-Challenger': ''}]","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestChallenges","test_challenges","",""
+"
+        Тестирует GET /challenges с различными заголовками.
+        ","10","Get all challenges. Using extra headers[None]","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestChallenges","test_challenges","",""
+"
+        Тестирует GET /todos с различными заголовками.
+        ","8","Get all todos. Using extra headers[{'Authorization': 'Bearer invalid'}]","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestTodos","test_challenges","",""
+"
+        Тестирует GET /todos с различными заголовками.
+        ","8","Get all todos. Using extra headers[None]","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestTodos","test_challenges","",""
+"
+        Тестирует GET /challenges с различными заголовками.
+        ","10","Get all challenges. Using extra headers[{'Authorization': 'Bearer invalid'}]","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestChallenges","test_challenges","",""
+"
+        Тестирует GET /todos с различными заголовками.
+        ","9","Get all todos. Using extra headers[{'X-Challenger': 'test_token', 'Accept': 'application/xml'}]","tests","Tue May 27 21:05:20 GMT 2025","passed","Tue May 27 21:05:20 GMT 2025","TestTodos","test_challenges","",""

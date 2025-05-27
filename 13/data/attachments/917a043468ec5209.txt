@@ -1,0 +1,5 @@
+DEBUG    config.settings:settings.py:41 Settings: {'api_url': HttpUrl('https://apichallenges.eviltester.com/'), 'api_timeout': 10.0, 'api_x_challenger': 'ac54057e-a8de-49af-8857-e57087a94c6b', 'log_level': 'DEBUG'}
+DEBUG    fixtures.settings_fixtures:settings_fixtures.py:15 Loaded settings: {'api_url': HttpUrl('https://apichallenges.eviltester.com/'), 'api_timeout': 10.0, 'api_x_challenger': 'ac54057e-a8de-49af-8857-e57087a94c6b', 'log_level': 'DEBUG'}
+INFO     clients.base_client:base_client.py:23 Make POST request to /challenger with headers {'accept': '*/*', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'user-agent': 'python-httpx/0.28.1', 'x-challenger': ''} params {}
+INFO     clients.base_client:base_client.py:28 Got response 201 from /challenger
+INFO     clients.challenges_client:challenges_client.py:41 Successfully received token: 94dc9f1e-d...

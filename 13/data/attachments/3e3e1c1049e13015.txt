@@ -1,0 +1,2 @@
+INFO     clients.base_client:base_client.py:23 Make GET request to /challenges with headers {'accept': '*/*', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'user-agent': 'python-httpx/0.28.1', 'x-challenger': 'ac54057e-a8de-49af-8857-e57087a94c6b'} params None
+INFO     clients.base_client:base_client.py:28 Got response 200 from /challenges
