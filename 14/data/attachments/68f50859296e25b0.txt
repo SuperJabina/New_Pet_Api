@@ -1,0 +1,5 @@
+accept: */*
+accept-encoding: gzip, deflate
+connection: keep-alive
+user-agent: python-httpx/0.28.1
+x-challenger: 0ec06db1-e4df-46f7-87cf-6b414d0d3d36

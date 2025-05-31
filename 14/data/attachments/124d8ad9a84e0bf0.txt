@@ -1,0 +1,23 @@
+INFO     clients.todos_client:todos_client.py:50 Fetching specific todo with ID: 150
+DEBUG    clients.todos_client:todos_client.py:51 Request parameters - headers: None
+DEBUG    clients.base_client:base_client.py:71 Preparing GET request to /todos/150 with params None
+INFO     clients.base_client:base_client.py:52 Make GET request to /todos/150 with headers {'accept': '*/*', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'user-agent': 'python-httpx/0.28.1', 'x-challenger': '0ec06db1-e4df-46f7-87cf-6b414d0d3d36'} params None
+INFO     tools.attachments:attachments.py:19 Attaching request data to Allure for GET /todos/150
+DEBUG    tools.attachments:attachments.py:24 Attaching request headers: {'accept': '*/*', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'user-agent': 'python-httpx/0.28.1', 'x-challenger': '0ec06db1-e4df-46f7-87cf-6b414d0d3d36'}
+INFO     tools.attachments:attachments.py:80 Request data successfully attached to Allure
+INFO     clients.base_client:base_client.py:58 Received response with status 404 from /todos/150
+INFO     tools.attachments:attachments.py:148 Attaching response data to Allure for GET /todos/150
+DEBUG    tools.attachments:attachments.py:158 Attaching response headers: {'access-control-allow-credentials': 'true', 'access-control-allow-headers': '*', 'access-control-allow-methods': '*', 'access-control-allow-origin': '*', 'access-control-expose-headers': '*', 'content-type': 'application/json', 'date': 'Sat, 31 May 2025 19:02:24 GMT', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=iG2TvxjkeF%2B4VUC5lN8HgtAoW40xk2gTpRonZKbeWwk%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1748718144"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=iG2TvxjkeF%2B4VUC5lN8HgtAoW40xk2gTpRonZKbeWwk%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1748718144"', 'server': 'Heroku', 'via': '1.1 heroku-router', 'x-challenger': '0ec06db1-e4df-46f7-87cf-6b414d0d3d36', 'x-robots-tag': 'noindex', 'content-length': '63'}
+DEBUG    tools.attachments:attachments.py:168 Processing response body with content type: application/json
+DEBUG    tools.attachments:attachments.py:175 JSON response body formatted successfully
+INFO     tools.attachments:attachments.py:208 Response data successfully attached to Allure
+INFO     clients.todos_client:todos_client.py:57 Successfully fetched todo with ID 150, status code: 404
+INFO     tools.assertions.base_assertions:base_assertions.py:448 Starting comprehensive checks for API response
+DEBUG    tools.assertions.base_assertions:base_assertions.py:449 Checks to perform: {'status_code': <HTTPStatus.NOT_FOUND: 404>, 'response_time': 5.0, 'schema': True, 'headers_present': ['content-type'], 'header_values': None, 'key_present': ['todos'], 'key_value': {'id': 150}, 'request_headers': None}
+INFO     tools.assertions.base_assertions:base_assertions.py:31 Checking status code, expected: 404
+DEBUG    tools.assertions.base_assertions:base_assertions.py:41 Status code check passed: 404
+INFO     tools.assertions.base_assertions:base_assertions.py:52 Checking response time, max allowed: 5.0s
+DEBUG    tools.assertions.base_assertions:base_assertions.py:67 Response time check passed: 0.004s
+INFO     tools.assertions.base_assertions:base_assertions.py:78 Checking for presence of headers: ['content-type']
+DEBUG    tools.assertions.base_assertions:base_assertions.py:88 Header presence check passed for: ['content-type']
+INFO     tools.assertions.base_assertions:base_assertions.py:488 Comprehensive checks completed successfully

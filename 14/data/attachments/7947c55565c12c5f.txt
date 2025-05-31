@@ -1,0 +1,15 @@
+access-control-allow-credentials: true
+access-control-allow-headers: *
+access-control-allow-methods: *
+access-control-allow-origin: *
+access-control-expose-headers: *
+content-type: application/json
+date: Sat, 31 May 2025 19:02:24 GMT
+nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=iG2TvxjkeF%2B4VUC5lN8HgtAoW40xk2gTpRonZKbeWwk%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1748718144"}],"max_age":3600}
+reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=iG2TvxjkeF%2B4VUC5lN8HgtAoW40xk2gTpRonZKbeWwk%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1748718144"
+server: Heroku
+via: 1.1 heroku-router
+x-challenger: UNKNOWN CHALLENGER - Challenger not found
+x-robots-tag: noindex
+content-length: 723

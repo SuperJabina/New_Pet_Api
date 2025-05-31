@@ -1,0 +1,15 @@
+DEBUG    clients.base_client:base_client.py:154 Preparing HEAD request to /todos with JSON data None
+INFO     clients.base_client:base_client.py:52 Make HEAD request to /todos with headers {'accept': '*/*', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'user-agent': 'python-httpx/0.28.1', 'x-challenger': '0ec06db1-e4df-46f7-87cf-6b414d0d3d36'} params {}
+INFO     tools.attachments:attachments.py:19 Attaching request data to Allure for HEAD /todos
+DEBUG    tools.attachments:attachments.py:24 Attaching request headers: {'accept': '*/*', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'user-agent': 'python-httpx/0.28.1', 'x-challenger': '0ec06db1-e4df-46f7-87cf-6b414d0d3d36'}
+INFO     tools.attachments:attachments.py:80 Request data successfully attached to Allure
+INFO     clients.base_client:base_client.py:58 Received response with status 200 from /todos
+INFO     tools.attachments:attachments.py:148 Attaching response data to Allure for HEAD /todos
+DEBUG    tools.attachments:attachments.py:158 Attaching response headers: {'access-control-allow-credentials': 'true', 'access-control-allow-headers': '*', 'access-control-allow-methods': '*', 'access-control-allow-origin': '*', 'access-control-expose-headers': '*', 'content-type': 'application/json', 'date': 'Sat, 31 May 2025 19:02:24 GMT', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=iG2TvxjkeF%2B4VUC5lN8HgtAoW40xk2gTpRonZKbeWwk%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1748718144"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=iG2TvxjkeF%2B4VUC5lN8HgtAoW40xk2gTpRonZKbeWwk%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1748718144"', 'server': 'Heroku', 'via': '1.1 heroku-router', 'x-challenger': '0ec06db1-e4df-46f7-87cf-6b414d0d3d36', 'x-robots-tag': 'noindex'}
+INFO     tools.attachments:attachments.py:208 Response data successfully attached to Allure
+INFO     tools.assertions.base_assertions:base_assertions.py:31 Checking status code, expected: 200
+DEBUG    tools.assertions.base_assertions:base_assertions.py:41 Status code check passed: 200
+INFO     tools.assertions.base_assertions:base_assertions.py:78 Checking for presence of headers: ['X-CHALLENGER']
+DEBUG    tools.assertions.base_assertions:base_assertions.py:88 Header presence check passed for: ['X-CHALLENGER']
+DEBUG    fixtures.clients_fixtures:clients_fixtures.py:28 Closing HTTP client
+INFO     fixtures.clients_fixtures:clients_fixtures.py:30 HTTP client closed successfully

@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<challenges>
+    <challenge>
+        <name>
+            POST /challenger (201)
+        </name>
+        <description>
+            Issue a POST request on the `/challenger` end point, with no body, to create a new challenger session. Use the generated X-CHALLENGER header in future requests to track challenge completion.
+        </description>
+        <id>
+            1
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /challenges (200)
+        </name>
+        <description>
+            Issue a GET request on the `/challenges` end point
+        </description>
+        <id>
+            2
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos (200)
+        </name>
+        <description>
+            Issue a GET request on the `/todos` end point
+        </description>
+        <id>
+            3
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todo (404) not plural
+        </name>
+        <description>
+            Issue a GET request on the `/todo` end point should 404 because nouns should be plural
+        </description>
+        <id>
+            4
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos/{id} (200)
+        </name>
+        <description>
+            Issue a GET request on the `/todos/{id}` end point to return a specific todo
+        </description>
+        <id>
+            5
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos/{id} (404)
+        </name>
+        <description>
+            Issue a GET request on the `/todos/{id}` end point for a todo that does not exist
+        </description>
+        <id>
+            6
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos (200) ?filter
+        </name>
+        <description>
+            Issue a GET request on the `/todos` end point with a query filter to get only todos which are 'done'. There must exist both 'done' and 'not done' todos, to pass this challenge.
+        </description>
+        <id>
+            7
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            HEAD /todos (200)
+        </name>
+        <description>
+            Issue a HEAD request on the `/todos` end point
+        </description>
+        <id>
+            8
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (201)
+        </name>
+        <description>
+            Issue a POST request to successfully create a todo
+        </description>
+        <id>
+            9
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (400) doneStatus
+        </name>
+        <description>
+            Issue a POST request to create a todo but fail validation on the `doneStatus` field
+        </description>
+        <id>
+            10
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (400) title too long
+        </name>
+        <description>
+            Issue a POST request to create a todo but fail length validation on the `title` field because your title exceeds maximum allowable characters.
+        </description>
+        <id>
+            11
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (400) description too long
+        </name>
+        <description>
+            Issue a POST request to create a todo but fail length validation on the `description` because your description exceeds maximum allowable characters.
+        </description>
+        <id>
+            12
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (201) max out content
+        </name>
+        <description>
+            Issue a POST request to create a todo with maximum length title and description fields.
+        </description>
+        <id>
+            13
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (413) content too long
+        </name>
+        <description>
+            Issue a POST request to create a todo but fail payload length validation on the `description` because your whole payload exceeds maximum allowable 5000 characters.
+        </description>
+        <id>
+            14
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (400) extra
+        </name>
+        <description>
+            Issue a POST request to create a todo but fail validation because your payload contains an unrecognised field.
+        </description>
+        <id>
+            15
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PUT /todos/{id} (400)
+        </name>
+        <description>
+            Issue a PUT request to unsuccessfully create a todo
+        </description>
+        <id>
+            16
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos/{id} (200)
+        </name>
+        <description>
+            Issue a POST request to successfully update a todo
+        </description>
+        <id>
+            17
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos/{id} (404)
+        </name>
+        <description>
+            Issue a POST request for a todo which does not exist. Expect to receive a 404 response.
+        </description>
+        <id>
+            18
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PUT /todos/{id} full (200)
+        </name>
+        <description>
+            Issue a PUT request to update an existing todo with a complete payload i.e. title, description and donestatus.
+        </description>
+        <id>
+            19
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PUT /todos/{id} partial (200)
+        </name>
+        <description>
+            Issue a PUT request to update an existing todo with just mandatory items in payload i.e. title.
+        </description>
+        <id>
+            20
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PUT /todos/{id} no title (400)
+        </name>
+        <description>
+            Issue a PUT request to fail to update an existing todo because title is missing in payload.
+        </description>
+        <id>
+            21
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PUT /todos/{id} no amend id (400)
+        </name>
+        <description>
+            Issue a PUT request to fail to update an existing todo because id different in payload.
+        </description>
+        <id>
+            22
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            DELETE /todos/{id} (200)
+        </name>
+        <description>
+            Issue a DELETE request to successfully delete a todo
+        </description>
+        <id>
+            23
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            OPTIONS /todos (200)
+        </name>
+        <description>
+            Issue an OPTIONS request on the `/todos` end point. You might want to manually check the 'Allow' header in the response is as expected.
+        </description>
+        <id>
+            24
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos (200) XML
+        </name>
+        <description>
+            Issue a GET request on the `/todos` end point with an `Accept` header of `application/xml` to receive results in XML format
+        </description>
+        <id>
+            25
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos (200) JSON
+        </name>
+        <description>
+            Issue a GET request on the `/todos` end point with an `Accept` header of `application/json` to receive results in JSON format
+        </description>
+        <id>
+            26
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos (200) ANY
+        </name>
+        <description>
+            Issue a GET request on the `/todos` end point with an `Accept` header of `*/*` to receive results in default JSON format
+        </description>
+        <id>
+            27
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos (200) XML pref
+        </name>
+        <description>
+            Issue a GET request on the `/todos` end point with an `Accept` header of `application/xml, application/json` to receive results in the preferred XML format
+        </description>
+        <id>
+            28
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos (200) no accept
+        </name>
+        <description>
+            Issue a GET request on the `/todos` end point with no `Accept` header present in the message to receive results in default JSON format
+        </description>
+        <id>
+            29
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /todos (406)
+        </name>
+        <description>
+            Issue a GET request on the `/todos` end point with an `Accept` header `application/gzip` to receive 406 'NOT ACCEPTABLE' status code
+        </description>
+        <id>
+            30
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos XML
+        </name>
+        <description>
+            Issue a POST request on the `/todos` end point to create a todo using Content-Type `application/xml`, and Accepting only XML ie. Accept header of `application/xml`
+        </description>
+        <id>
+            31
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos JSON
+        </name>
+        <description>
+            Issue a POST request on the `/todos` end point to create a todo using Content-Type `application/json`, and Accepting only JSON ie. Accept header of `application/json`
+        </description>
+        <id>
+            32
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (415)
+        </name>
+        <description>
+            Issue a POST request on the `/todos` end point with an unsupported content type to generate a 415 status code
+        </description>
+        <id>
+            33
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /challenger/guid (existing X-CHALLENGER)
+        </name>
+        <description>
+            Issue a GET request on the `/challenger/{guid}` end point, with an existing challenger GUID. This will return the progress data payload that can be used to later restore your progress to this status.
+        </description>
+        <id>
+            34
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PUT /challenger/guid RESTORE
+        </name>
+        <description>
+            Issue a PUT request on the `/challenger/{guid}` end point, with an existing challenger GUID to restore that challenger's progress into memory.
+        </description>
+        <id>
+            35
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PUT /challenger/guid CREATE
+        </name>
+        <description>
+            Issue a PUT request on the `/challenger/{guid}` end point, with a challenger GUID not currently in memory to restore that challenger's progress into memory.
+        </description>
+        <id>
+            36
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /challenger/database/guid (200)
+        </name>
+        <description>
+            Issue a GET request on the `/challenger/database/{guid}` end point, to retrieve the current todos database for the user. You can use this to restore state later.
+        </description>
+        <id>
+            37
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PUT /challenger/database/guid (Update)
+        </name>
+        <description>
+            Issue a PUT request on the `/challenger/database/{guid}` end point, with a payload to restore the Todos database in memory.
+        </description>
+        <id>
+            38
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos XML to JSON
+        </name>
+        <description>
+            Issue a POST request on the `/todos` end point to create a todo using Content-Type `application/xml` but Accept `application/json`
+        </description>
+        <id>
+            39
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos JSON to XML
+        </name>
+        <description>
+            Issue a POST request on the `/todos` end point to create a todo using Content-Type `application/json` but Accept `application/xml`
+        </description>
+        <id>
+            40
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            DELETE /heartbeat (405)
+        </name>
+        <description>
+            Issue a DELETE request on the `/heartbeat` end point and receive 405 (Method Not Allowed)
+        </description>
+        <id>
+            41
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            PATCH /heartbeat (500)
+        </name>
+        <description>
+            Issue a PATCH request on the `/heartbeat` end point and receive 500 (internal server error)
+        </description>
+        <id>
+            42
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            TRACE /heartbeat (501)
+        </name>
+        <description>
+            Issue a TRACE request on the `/heartbeat` end point and receive 501 (Not Implemented)
+        </description>
+        <id>
+            43
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /heartbeat (204)
+        </name>
+        <description>
+            Issue a GET request on the `/heartbeat` end point and receive 204 when server is running
+        </description>
+        <id>
+            44
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /heartbeat as DELETE (405)
+        </name>
+        <description>
+            Issue a POST request on the `/heartbeat` end point and receive 405 when you override the Method Verb to a DELETE
+        </description>
+        <id>
+            45
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /heartbeat as PATCH (500)
+        </name>
+        <description>
+            Issue a POST request on the `/heartbeat` end point and receive 500 when you override the Method Verb to a PATCH
+        </description>
+        <id>
+            46
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /heartbeat as Trace (501)
+        </name>
+        <description>
+            Issue a POST request on the `/heartbeat` end point and receive 501 (Not Implemented) when you override the Method Verb to a TRACE
+        </description>
+        <id>
+            47
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /secret/token (401)
+        </name>
+        <description>
+            Issue a POST request on the `/secret/token` end point and receive 401 when Basic auth username/password is not admin/password
+        </description>
+        <id>
+            48
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /secret/token (201)
+        </name>
+        <description>
+            Issue a POST request on the `/secret/token` end point and receive 201 when Basic auth username/password is admin/password
+        </description>
+        <id>
+            49
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /secret/note (403)
+        </name>
+        <description>
+            Issue a GET request on the `/secret/note` end point and receive 403 when X-AUTH-TOKEN does not match a valid token
+        </description>
+        <id>
+            50
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /secret/note (401)
+        </name>
+        <description>
+            Issue a GET request on the `/secret/note` end point and receive 401 when no X-AUTH-TOKEN header present
+        </description>
+        <id>
+            51
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /secret/note (200)
+        </name>
+        <description>
+            Issue a GET request on the `/secret/note` end point receive 200 when valid X-AUTH-TOKEN used - response body should contain the note
+        </description>
+        <id>
+            52
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /secret/note (200)
+        </name>
+        <description>
+            Issue a POST request on the `/secret/note` end point with a note payload e.g. {"note":"my note"} and receive 200 when valid X-AUTH-TOKEN used. Note is maximum length 100 chars and will be truncated when stored.
+        </description>
+        <id>
+            53
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /secret/note (401)
+        </name>
+        <description>
+            Issue a POST request on the `/secret/note` end point with a note payload {"note":"my note"} and receive 401 when no X-AUTH-TOKEN present
+        </description>
+        <id>
+            54
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /secret/note (403)
+        </name>
+        <description>
+            Issue a POST request on the `/secret/note` end point with a note payload {"note":"my note"} and receive 403 when X-AUTH-TOKEN does not match a valid token
+        </description>
+        <id>
+            55
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            GET /secret/note (Bearer)
+        </name>
+        <description>
+            Issue a GET request on the `/secret/note` end point receive 200 when using the X-AUTH-TOKEN value as an Authorization Bearer token - response body should contain the note
+        </description>
+        <id>
+            56
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /secret/note (Bearer)
+        </name>
+        <description>
+            Issue a POST request on the `/secret/note` end point with a note payload e.g. {"note":"my note"} and receive 200 when valid X-AUTH-TOKEN value used as an Authorization Bearer token. Status code 200 received. Note is maximum length 100 chars and will be truncated when stored.
+        </description>
+        <id>
+            57
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            DELETE /todos/{id} (200) all
+        </name>
+        <description>
+            Issue a DELETE request to successfully delete the last todo in system so that there are no more todos in the system
+        </description>
+        <id>
+            58
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+    <challenge>
+        <name>
+            POST /todos (201) all
+        </name>
+        <description>
+            Issue as many POST requests as it takes to add the maximum number of TODOS allowed for a user. The maximum number should be listed in the documentation.
+        </description>
+        <id>
+            59
+        </id>
+        <status>
+            false
+        </status>
+    </challenge>
+</challenges>

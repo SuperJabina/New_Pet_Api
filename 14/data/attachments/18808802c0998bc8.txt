@@ -1,0 +1,2 @@
+Response time: 0.004s
+Max allowed: 5.000s
